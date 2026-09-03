@@ -4,7 +4,7 @@
 #include "Moteur.hpp"
 
 /**
- * @brief Classe représentant une Moto (Composition avec Moteur)
+ * @brief Classe representant une Moto (Composition avec Moteur)
  */
 class Moto {
 private:
@@ -14,27 +14,30 @@ private:
     Moteur* moteur; ///< Pointeur vers le moteur (Composition)
 
 public:
-    Moto(Moteur* m, std::string c, std::string n, int p) : poids(p), couleur(c), nom(n), moteur(m) {}
+    // Ajout du prefixe 'p_' pour eviter le warning -Wshadow avec les attributs
+    Moto(Moteur* p_moteur, std::string p_couleur) : poids(0), couleur(p_couleur), nom("Inconnu"), moteur(p_moteur) {}
 
     /**
      * @brief Destructeur de la Moto. 
-     * Gère la destruction du moteur (relation de composition).
+     * Gere la destruction du moteur (relation de composition).
      */
     ~Moto() {
         delete moteur; 
     }
 
     int getPoids() const { return poids; }
-    void setPoids(int p) { poids = p; }
+    
+    // Ajout du prefixe 'p_' pour eviter le warning -Wshadow
+    void setPoids(int p_poids) { poids = p_poids; }
     
     std::string getCouleur() const { return couleur; }
-    std::string getNom() const { return nom; }
+    
     Moteur* getMoteur() const { return moteur; }
 
     /**
-     * @brief Calcule l'accélération théorique à 50 km/h
+     * @brief Calcule l'acceleration theorique a 50 km/h
      * Formule : a = P / (m * v)
-     * @return float L'accélération en m/s^2
+     * @return float L'acceleration en m/s^2
      */
     float getAcceleration() const {
         if (poids == 0) return 0;
@@ -44,7 +47,7 @@ public:
     }
 
     std::string toString() const {
-        return "Moto " + nom + " (" + couleur + ", " + std::to_string(poids) + "kg)\n    Accel a 50km/h: " 
+        return "Moto " + couleur + " (" + std::to_string(poids) + "kg)\n    Accel a 50km/h: " 
                + std::to_string(getAcceleration()) + " m/s2\n    -> " + moteur->toString();
     }
 };

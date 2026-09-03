@@ -3,10 +3,10 @@
 #include <string>
 
 /**
- * @brief Classe abstraite représentant un moteur.
+ * @brief Classe abstraite representant un moteur.
  */
 class Moteur {
-protected:
+private: // Modifie en 'private' pour respecter le '-' du diagramme UML
     int puissance; ///< Puissance en Watts
 
 public:
@@ -17,7 +17,7 @@ public:
     Moteur(int p) : puissance(p) {}
 
     /**
-     * @brief Destructeur virtuel indispensable pour éviter les fuites mémoires lors du polymorphisme.
+     * @brief Destructeur virtuel indispensable pour eviter les fuites memoires lors du polymorphisme.
      */
     virtual ~Moteur() = default;
 
@@ -25,8 +25,8 @@ public:
     void setPuissance(int p) { puissance = p; }
 
     /**
-     * @brief Méthode virtuelle pure pour l'affichage
-     * @return std::string Caractéristiques du moteur
+     * @brief Methode virtuelle pure pour l'affichage
+     * @return std::string Caracteristiques du moteur
      */
     virtual std::string toString() const = 0; 
 };
