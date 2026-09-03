@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Thermique.hpp Source File</title>
+<title>My Project: C:/Users/Malo/Desktop/Projet CIEL/Malo Brayan/Projet-C-Motos/Electrique.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('_thermique_8hpp_source.html','',''); });
+$(function(){initNavTree('_electrique_8hpp_source.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -90,42 +90,42 @@ $(function(){initNavTree('_thermique_8hpp_source.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Thermique.hpp</div></div>
+  <div class="headertitle"><div class="title">C:/Users/Malo/Desktop/Projet CIEL/Malo Brayan/Projet-C-Motos/Electrique.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef THERMIQUE_HPP</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define THERMIQUE_HPP</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ELECTRIQUE_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ELECTRIQUE_HPP</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Moteur.hpp&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_thermique.html">    5</a></span><span class="keyword">class </span>Thermique : <span class="keyword">public</span> <a class="code hl_function" href="class_moteur.html#a9fbf2e6c7cae85b2a21dd0764fff8bd0">Moteur</a> {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_electrique.html">    5</a></span><span class="keyword">class </span>Electrique : <span class="keyword">public</span> <a class="code hl_function" href="class_moteur.html#a9fbf2e6c7cae85b2a21dd0764fff8bd0">Moteur</a> {</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">float</span> _cylindree;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">float</span> _tensionMax;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    Thermique(<span class="keywordtype">int</span> p, <span class="keywordtype">float</span> c) : <a class="code hl_function" href="class_moteur.html#a9fbf2e6c7cae85b2a21dd0764fff8bd0">Moteur</a>(p), _cylindree(c) {}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    Electrique(<span class="keywordtype">int</span> p, <span class="keywordtype">float</span> tension) : <a class="code hl_function" href="class_moteur.html#a9fbf2e6c7cae85b2a21dd0764fff8bd0">Moteur</a>(p), _tensionMax(tension) {}</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">float</span> getCylindree()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _cylindree; }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">float</span> getTensionMax()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _tensionMax; }</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> setCylindree(<span class="keywordtype">float</span> newCylindree) { _cylindree = newCylindree; }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> setTensionMax(<span class="keywordtype">float</span> p_puissance) { _tensionMax = p_puissance; }</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_thermique.html#a6cadd2c4753c61ea157d740074af2cab">   16</a></span>    std::string <a class="code hl_function" href="class_thermique.html#a6cadd2c4753c61ea157d740074af2cab">toString</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Moteur Thermique (Puissance: &quot;</span> + std::to_string(getPuissance()) + <span class="stringliteral">&quot;W, Cylindree: &quot;</span> + std::to_string(_cylindree) + <span class="stringliteral">&quot;cc)&quot;</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_electrique.html#a134ac714319a5808aa24aedd9524baf2">   16</a></span>    std::string <a class="code hl_function" href="class_electrique.html#a134ac714319a5808aa24aedd9524baf2">toString</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Moteur Electrique (Puissance: &quot;</span> + std::to_string(getPuissance()) + <span class="stringliteral">&quot;W, Tension Max: &quot;</span> + std::to_string(_tensionMax) + <span class="stringliteral">&quot;V)&quot;</span>;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
 </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
 </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_electrique_html_a134ac714319a5808aa24aedd9524baf2"><div class="ttname"><a href="class_electrique.html#a134ac714319a5808aa24aedd9524baf2">Electrique::toString</a></div><div class="ttdeci">std::string toString() const override</div><div class="ttdoc">Methode virtuelle pure pour l&#39;affichage.</div><div class="ttdef"><b>Definition</b> Electrique.hpp:16</div></div>
 <div class="ttc" id="aclass_moteur_html_a9fbf2e6c7cae85b2a21dd0764fff8bd0"><div class="ttname"><a href="class_moteur.html#a9fbf2e6c7cae85b2a21dd0764fff8bd0">Moteur::Moteur</a></div><div class="ttdeci">Moteur(int p)</div><div class="ttdoc">Constructeur de Moteur.</div><div class="ttdef"><b>Definition</b> Moteur.hpp:17</div></div>
-<div class="ttc" id="aclass_thermique_html_a6cadd2c4753c61ea157d740074af2cab"><div class="ttname"><a href="class_thermique.html#a6cadd2c4753c61ea157d740074af2cab">Thermique::toString</a></div><div class="ttdeci">std::string toString() const override</div><div class="ttdoc">Methode virtuelle pure pour l&#39;affichage.</div><div class="ttdef"><b>Definition</b> Thermique.hpp:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Thermique.hpp</b></li>
+    <li class="navelem"><b>Electrique.hpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>
