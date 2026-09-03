@@ -14,7 +14,7 @@ private:
     Moteur* moteur; ///< Pointeur vers le moteur (Composition)
 
 public:
-    Moto(Moteur* m, std::string c, std::string n, int p) : moteur(m), couleur(c), nom(n), poids(p) {}
+    Moto(Moteur* m, std::string c, std::string n, int p) : poids(p), couleur(c), nom(n), moteur(m) {}
 
     /**
      * @brief Destructeur de la Moto. 
@@ -40,7 +40,7 @@ public:
         if (poids == 0) return 0;
         // 50 km/h = 50 / 3.6 m/s
         float vitesse_ms = 50.0f / 3.6f; 
-        return moteur->getPuissance() / (poids * vitesse_ms);
+        return static_cast<float>(moteur->getPuissance()) / (static_cast<float>(poids) * vitesse_ms);
     }
 
     std::string toString() const {
