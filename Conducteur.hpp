@@ -10,34 +10,32 @@
  */
 class Conducteur {
 private:
-    std::string nom;
-    std::string prenom;
-    int anneeNaissance;
-    std::vector<Moto*> mesMotos; ///< Collection de pointeurs vers des motos (Agregation)
+    std::string _nom;
+    std::string _prenom;
+    int _anneeNaissance;
+    std::vector<Moto*> _mesMotos; ///< Collection de pointeurs vers des motos (Agregation)
 
 public:
-    Conducteur(std::string n, std::string p, int a) : nom(n), prenom(p), anneeNaissance(a) {}
+    Conducteur(std::string n, std::string p, int a) 
+        : _nom(n), _prenom(p), _anneeNaissance(a) {}
 
-    std::string getNom() const { return nom; }
-    std::string getPrenom() const { return prenom; }
+    std::string getNom() const { return _nom; }
+    std::string getPrenom() const { return _prenom; }
     
-    // Le diagramme UML demande un string en retour pour l'annee
-    std::string getAnneeNaissance() const { return std::to_string(anneeNaissance); }
+    std::string getAnneeNaissance() const { return std::to_string(_anneeNaissance); }
 
-    // Le parametre s'appelle 'newMoto' selon l'UML
     void addMoto(Moto* newMoto) {
-        mesMotos.push_back(newMoto);
+        _mesMotos.push_back(newMoto);
     }
 
-    // Le parametre s'appelle 'rmMoto' selon l'UML
     void rmMoto(Moto* rmMoto) {
-        mesMotos.erase(std::remove(mesMotos.begin(), mesMotos.end(), rmMoto), mesMotos.end());
+        _mesMotos.erase(std::remove(_mesMotos.begin(), _mesMotos.end(), rmMoto), _mesMotos.end());
     }
 
     std::string toString() const {
-        std::string res = "Conducteur: " + prenom + " " + nom + " (Ne en " + getAnneeNaissance() + ")\n";
-        res += "  Possede " + std::to_string(mesMotos.size()) + " moto(s):\n";
-        for (auto* moto : mesMotos) {
+        std::string res = "Conducteur: " + _prenom + " " + _nom + " (Ne en " + getAnneeNaissance() + ")\n";
+        res += "  Possede " + std::to_string(_mesMotos.size()) + " moto(s):\n";
+        for (auto* moto : _mesMotos) {
             res += "    - " + moto->toString() + "\n";
         }
         return res;
