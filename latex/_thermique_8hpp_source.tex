@@ -7,20 +7,19 @@
 \DoxyCodeLine{00004\ }
 \DoxyCodeLine{00005\ \textcolor{keyword}{class\ }Thermique\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_moteur_a9fbf2e6c7cae85b2a21dd0764fff8bd0}{Moteur}}\ \{}
 \DoxyCodeLine{00006\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{float}\ cylindree;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keywordtype}{float}\ \_cylindree;}
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00010\ \ \ \ \ Thermique(\textcolor{keywordtype}{int}\ p,\ \textcolor{keywordtype}{float}\ c)\ :\ \doxymbox{\hyperlink{class_moteur_a9fbf2e6c7cae85b2a21dd0764fff8bd0}{Moteur}}(p),\ cylindree(c)\ \{\}}
+\DoxyCodeLine{00010\ \ \ \ \ Thermique(\textcolor{keywordtype}{int}\ p,\ \textcolor{keywordtype}{float}\ c)\ :\ \doxymbox{\hyperlink{class_moteur_a9fbf2e6c7cae85b2a21dd0764fff8bd0}{Moteur}}(p),\ \_cylindree(c)\ \{\}}
 \DoxyCodeLine{00011\ \ \ \ \ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ getCylindree()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ cylindree;\ \}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ getCylindree()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \_cylindree;\ \}}
 \DoxyCodeLine{00013\ \ \ \ \ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{comment}{//\ Le\ parametre\ s'appelle\ 'newCylindree'\ pour\ correspondre\ parfaitement\ a\ l'UML}}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ setCylindree(\textcolor{keywordtype}{float}\ newCylindree)\ \{\ cylindree\ =\ newCylindree;\ \}}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_thermique_a6cadd2c4753c61ea157d740074af2cab}{toString}}()\textcolor{keyword}{\ const\ override\ }\{}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Moteur\ Thermique\ (Puissance:\ "{}}\ +\ std::to\_string(getPuissance())\ +\ \textcolor{stringliteral}{"{}W,\ Cylindree:\ "{}}\ +\ std::to\_string(cylindree)\ +\ \textcolor{stringliteral}{"{}cc)"{}};}
-\DoxyCodeLine{00019\ \ \ \ \ \}}
-\DoxyCodeLine{00020\ \};}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ setCylindree(\textcolor{keywordtype}{float}\ newCylindree)\ \{\ \_cylindree\ =\ newCylindree;\ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ \doxymbox{\hyperlink{class_thermique_a6cadd2c4753c61ea157d740074af2cab}{toString}}()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Moteur\ Thermique\ (Puissance:\ "{}}\ +\ std::to\_string(getPuissance())\ +\ \textcolor{stringliteral}{"{}W,\ Cylindree:\ "{}}\ +\ std::to\_string(\_cylindree)\ +\ \textcolor{stringliteral}{"{}cc)"{}};}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

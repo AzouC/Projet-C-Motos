@@ -25,6 +25,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo_broceliande.png"/></td>
   <td id="projectalign">
    <div id="projectname">My Project
    </div>
@@ -98,26 +99,24 @@ $(function(){initNavTree('_electrique_8hpp_source.html','',''); });
 <div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_electrique.html">    5</a></span><span class="keyword">class </span>Electrique : <span class="keyword">public</span> <a class="code hl_function" href="class_moteur.html#a9fbf2e6c7cae85b2a21dd0764fff8bd0">Moteur</a> {</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">float</span> tensionMax;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">float</span> _tensionMax;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    Electrique(<span class="keywordtype">int</span> p, <span class="keywordtype">float</span> tension) : <a class="code hl_function" href="class_moteur.html#a9fbf2e6c7cae85b2a21dd0764fff8bd0">Moteur</a>(p), tensionMax(tension) {}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    Electrique(<span class="keywordtype">int</span> p, <span class="keywordtype">float</span> tension) : <a class="code hl_function" href="class_moteur.html#a9fbf2e6c7cae85b2a21dd0764fff8bd0">Moteur</a>(p), _tensionMax(tension) {}</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">float</span> getTensionMax()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> tensionMax; }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">float</span> getTensionMax()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _tensionMax; }</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// L&#39;UML indique &#39;puissance&#39; comme parametre, mais cela masque l&#39;attribut &#39;puissance&#39; herite de Moteur.</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// Utilisation de &#39;p_puissance&#39; pour satisfaire le flag -Wshadow du compilateur.</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> setTensionMax(<span class="keywordtype">float</span> p_puissance) { tensionMax = p_puissance; }</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_electrique.html#a134ac714319a5808aa24aedd9524baf2">   18</a></span>    std::string <a class="code hl_function" href="class_electrique.html#a134ac714319a5808aa24aedd9524baf2">toString</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Moteur Electrique (Puissance: &quot;</span> + std::to_string(getPuissance()) + <span class="stringliteral">&quot;W, Tension Max: &quot;</span> + std::to_string(tensionMax) + <span class="stringliteral">&quot;V)&quot;</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">void</span> setTensionMax(<span class="keywordtype">float</span> p_puissance) { _tensionMax = p_puissance; }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_electrique.html#a134ac714319a5808aa24aedd9524baf2">   16</a></span>    std::string <a class="code hl_function" href="class_electrique.html#a134ac714319a5808aa24aedd9524baf2">toString</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Moteur Electrique (Puissance: &quot;</span> + std::to_string(getPuissance()) + <span class="stringliteral">&quot;W, Tension Max: &quot;</span> + std::to_string(_tensionMax) + <span class="stringliteral">&quot;V)&quot;</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
 </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_electrique_html_a134ac714319a5808aa24aedd9524baf2"><div class="ttname"><a href="class_electrique.html#a134ac714319a5808aa24aedd9524baf2">Electrique::toString</a></div><div class="ttdeci">std::string toString() const override</div><div class="ttdoc">Methode virtuelle pure pour l&#39;affichage.</div><div class="ttdef"><b>Definition</b> Electrique.hpp:18</div></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_electrique_html_a134ac714319a5808aa24aedd9524baf2"><div class="ttname"><a href="class_electrique.html#a134ac714319a5808aa24aedd9524baf2">Electrique::toString</a></div><div class="ttdeci">std::string toString() const override</div><div class="ttdoc">Methode virtuelle pure pour l&#39;affichage.</div><div class="ttdef"><b>Definition</b> Electrique.hpp:16</div></div>
 <div class="ttc" id="aclass_moteur_html_a9fbf2e6c7cae85b2a21dd0764fff8bd0"><div class="ttname"><a href="class_moteur.html#a9fbf2e6c7cae85b2a21dd0764fff8bd0">Moteur::Moteur</a></div><div class="ttdeci">Moteur(int p)</div><div class="ttdoc">Constructeur de Moteur.</div><div class="ttdef"><b>Definition</b> Moteur.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

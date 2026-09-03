@@ -8,40 +8,39 @@
 \DoxyCodeLine{00005\ }
 \DoxyCodeLine{00009\ \textcolor{keyword}{class\ }Moto\ \{}
 \DoxyCodeLine{00010\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ poids;\ }
-\DoxyCodeLine{00012\ \ \ \ \ std::string\ couleur;}
-\DoxyCodeLine{00013\ \ \ \ \ std::string\ nom;}
-\DoxyCodeLine{00014\ \ \ \ \ \doxymbox{\hyperlink{class_moteur}{Moteur}}*\ moteur;\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{int}\ \_poids;\ }
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ \_couleur;}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ \_nom;}
+\DoxyCodeLine{00014\ \ \ \ \ \doxymbox{\hyperlink{class_moteur}{Moteur}}*\ \_moteur;\ }
 \DoxyCodeLine{00015\ }
 \DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Ajout\ du\ prefixe\ 'p\_'\ pour\ eviter\ le\ warning\ -\/Wshadow\ avec\ les\ attributs}}
-\DoxyCodeLine{00018\ \ \ \ \ Moto(\doxymbox{\hyperlink{class_moteur}{Moteur}}*\ p\_moteur,\ std::string\ p\_couleur)\ :\ poids(0),\ couleur(p\_couleur),\ nom(\textcolor{stringliteral}{"{}Inconnu"{}}),\ moteur(p\_moteur)\ \{\}}
+\DoxyCodeLine{00017\ \ \ \ \ Moto(\doxymbox{\hyperlink{class_moteur}{Moteur}}*\ p\_moteur,\ std::string\ p\_couleur)\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ :\ \_poids(0),\ \_couleur(p\_couleur),\ \_nom(\textcolor{stringliteral}{"{}Inconnu"{}}),\ \_moteur(p\_moteur)\ \{\}}
 \DoxyCodeLine{00019\ }
 \DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_moto_a1f4624ebdd55bdc4a7ec32f70ab9f4ca}{\string~Moto}}()\ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ moteur;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \_moteur;\ }
 \DoxyCodeLine{00026\ \ \ \ \ \}}
 \DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ getPoids()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ poids;\ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ getPoids()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \_poids;\ \}}
 \DoxyCodeLine{00029\ \ \ \ \ }
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Ajout\ du\ prefixe\ 'p\_'\ pour\ eviter\ le\ warning\ -\/Wshadow}}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ setPoids(\textcolor{keywordtype}{int}\ p\_poids)\ \{\ poids\ =\ p\_poids;\ \}}
-\DoxyCodeLine{00032\ \ \ \ \ }
-\DoxyCodeLine{00033\ \ \ \ \ std::string\ getCouleur()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ couleur;\ \}}
-\DoxyCodeLine{00034\ \ \ \ \ }
-\DoxyCodeLine{00035\ \ \ \ \ Moteur*\ getMoteur()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ moteur;\ \}}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_moto_ab36e475fe36a58c71641d1ee8d825ca7}{getAcceleration}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (poids\ ==\ 0)\ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 50\ km/h\ =\ 50\ /\ 3.6\ m/s}}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ vitesse\_ms\ =\ 50.0f\ /\ 3.6f;\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(moteur-\/>getPuissance())\ /\ (\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(poids)\ *\ vitesse\_ms);}
-\DoxyCodeLine{00047\ \ \ \ \ \}}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ std::string\ toString()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Moto\ "{}}\ +\ couleur\ +\ \textcolor{stringliteral}{"{}\ ("{}}\ +\ std::to\_string(poids)\ +\ \textcolor{stringliteral}{"{}kg)\(\backslash\)n\ \ \ \ Accel\ a\ 50km/h:\ "{}}\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(\doxymbox{\hyperlink{class_moto_ab36e475fe36a58c71641d1ee8d825ca7}{getAcceleration}}())\ +\ \textcolor{stringliteral}{"{}\ m/s2\(\backslash\)n\ \ \ \ -\/>\ "{}}\ +\ moteur-\/>\doxymbox{\hyperlink{class_moteur_aa56f7ac89f3625af817079f7108e884a}{toString}}();}
-\DoxyCodeLine{00052\ \ \ \ \ \}}
-\DoxyCodeLine{00053\ \};}
-\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ setPoids(\textcolor{keywordtype}{int}\ p\_poids)\ \{\ \_poids\ =\ p\_poids;\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ std::string\ getCouleur()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \_couleur;\ \}}
+\DoxyCodeLine{00033\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ Moteur*\ getMoteur()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \_moteur;\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_moto_ab36e475fe36a58c71641d1ee8d825ca7}{getAcceleration}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_poids\ ==\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 50\ km/h\ =\ 50\ /\ 3.6\ m/s}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ vitesse\_ms\ =\ 50.0f\ /\ 3.6f;\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(\_moteur-\/>getPuissance())\ /\ (\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(\_poids)\ *\ vitesse\_ms);}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ std::string\ toString()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Moto\ "{}}\ +\ \_couleur\ +\ \textcolor{stringliteral}{"{}\ ("{}}\ +\ std::to\_string(\_poids)\ +\ \textcolor{stringliteral}{"{}kg)\(\backslash\)n\ \ \ \ Accel\ a\ 50km/h:\ "{}}\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ std::to\_string(\doxymbox{\hyperlink{class_moto_ab36e475fe36a58c71641d1ee8d825ca7}{getAcceleration}}())\ +\ \textcolor{stringliteral}{"{}\ m/s2\(\backslash\)n\ \ \ \ -\/>\ "{}}\ +\ \_moteur-\/>\doxymbox{\hyperlink{class_moteur_aa56f7ac89f3625af817079f7108e884a}{toString}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
