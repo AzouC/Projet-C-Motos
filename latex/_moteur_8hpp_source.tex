@@ -1,0 +1,24 @@
+\doxysection{Moteur.\+hpp}
+\hypertarget{_moteur_8hpp_source}{}\label{_moteur_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MOTEUR\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MOTEUR\_HPP}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_moteur_a9fbf2e6c7cae85b2a21dd0764fff8bd0}{Moteur}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{private}:\ \textcolor{comment}{//\ Modifie\ en\ 'private'\ pour\ respecter\ le\ '-\/'\ du\ diagramme\ UML}}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ puissance;\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \doxymbox{\hyperlink{class_moteur_a9fbf2e6c7cae85b2a21dd0764fff8bd0}{Moteur}}(\textcolor{keywordtype}{int}\ p)\ :\ puissance(p)\ \{\}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_moteur_a9368e757bec8339f5c6755df5ff4afda}{\string~Moteur}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ getPuissance()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ puissance;\ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ setPuissance(\textcolor{keywordtype}{int}\ p)\ \{\ puissance\ =\ p;\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \doxymbox{\hyperlink{class_moteur_aa56f7ac89f3625af817079f7108e884a}{toString}}()\ \textcolor{keyword}{const}\ =\ 0;\ }
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

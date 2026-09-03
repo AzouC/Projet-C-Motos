@@ -1,0 +1,83 @@
+\doxysection{Moteur Class Reference}
+\hypertarget{class_moteur}{}\label{class_moteur}\index{Moteur@{Moteur}}
+
+
+Classe abstraite representant un moteur.  
+
+
+
+
+{\ttfamily \+\#include $<$Moteur.\+hpp$>$}
+
+Inheritance diagram for Moteur:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_moteur}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_moteur_a9fbf2e6c7cae85b2a21dd0764fff8bd0}{Moteur}} (int p)
+\begin{DoxyCompactList}\small\item\em Constructeur de \doxylink{class_moteur}{Moteur}. \end{DoxyCompactList}\item 
+\Hypertarget{class_moteur_a9368e757bec8339f5c6755df5ff4afda}\label{class_moteur_a9368e757bec8339f5c6755df5ff4afda} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Moteur} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel indispensable pour eviter les fuites memoires lors du polymorphisme. \end{DoxyCompactList}\item 
+\Hypertarget{class_moteur_a9cb86b20d29c2251f203baca3240c2b2}\label{class_moteur_a9cb86b20d29c2251f203baca3240c2b2} 
+int {\bfseries get\+Puissance} () const
+\item 
+\Hypertarget{class_moteur_a09dfbeed7ef2c08231d6dd70f87a2681}\label{class_moteur_a09dfbeed7ef2c08231d6dd70f87a2681} 
+void {\bfseries set\+Puissance} (int p)
+\item 
+virtual std::\+string \doxymbox{\hyperlink{class_moteur_aa56f7ac89f3625af817079f7108e884a}{to\+String}} () const =0
+\begin{DoxyCompactList}\small\item\em Methode virtuelle pure pour l\textquotesingle{}affichage. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe abstraite representant un moteur. 
+
+\label{doc-constructors}
+\Hypertarget{class_moteur_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_moteur_a9fbf2e6c7cae85b2a21dd0764fff8bd0}\index{Moteur@{Moteur}!Moteur@{Moteur}}
+\index{Moteur@{Moteur}!Moteur@{Moteur}}
+\doxysubsubsection{\texorpdfstring{Moteur()}{Moteur()}}
+{\footnotesize\ttfamily \label{class_moteur_a9fbf2e6c7cae85b2a21dd0764fff8bd0} 
+Moteur::\+\+Moteur (\begin{DoxyParamCaption}\item[{int}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur de \doxylink{class_moteur}{Moteur}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Puissance du moteur en Watts \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_moteur_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_moteur_aa56f7ac89f3625af817079f7108e884a}\index{Moteur@{Moteur}!toString@{toString}}
+\index{toString@{toString}!Moteur@{Moteur}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_moteur_aa56f7ac89f3625af817079f7108e884a} 
+virtual std::\+string Moteur::\+to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Methode virtuelle pure pour l\textquotesingle{}affichage. 
+
+\begin{DoxyReturn}{Returns}
+std::\+string Caracteristiques du moteur 
+\end{DoxyReturn}
+
+
+Implemented in \doxymbox{\hyperlink{class_electrique_a134ac714319a5808aa24aedd9524baf2}{Electrique}}, and \doxymbox{\hyperlink{class_thermique_a6cadd2c4753c61ea157d740074af2cab}{Thermique}}.
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Moteur.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\doxysection{Moto Class Reference}
+\hypertarget{class_moto}{}\label{class_moto}\index{Moto@{Moto}}
+
+
+Classe representant une \doxylink{class_moto}{Moto} (Composition avec \doxylink{class_moteur}{Moteur}).  
+
+
+
+
+{\ttfamily \+\#include $<$Moto.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_moto_a2c03138f87f97593c9ad1cb4703c637f}\label{class_moto_a2c03138f87f97593c9ad1cb4703c637f} 
+{\bfseries Moto} (\doxymbox{\hyperlink{class_moteur}{Moteur}} \texorpdfstring{$\ast$}{*}p\+\_\+moteur, std::\+string p\+\_\+couleur)
+\item 
+\Hypertarget{class_moto_a1f4624ebdd55bdc4a7ec32f70ab9f4ca}\label{class_moto_a1f4624ebdd55bdc4a7ec32f70ab9f4ca} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Moto} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la \doxylink{class_moto}{Moto}. Gere la destruction du moteur (relation de composition). \end{DoxyCompactList}\item 
+\Hypertarget{class_moto_a282d5b294bd20df17cb87ecaf108ac0d}\label{class_moto_a282d5b294bd20df17cb87ecaf108ac0d} 
+int {\bfseries get\+Poids} () const
+\item 
+\Hypertarget{class_moto_aef68241d21a60e334fce11824c7200aa}\label{class_moto_aef68241d21a60e334fce11824c7200aa} 
+void {\bfseries set\+Poids} (int p\+\_\+poids)
+\item 
+\Hypertarget{class_moto_ab36dc952699b9da6a8da2ead7beba9cd}\label{class_moto_ab36dc952699b9da6a8da2ead7beba9cd} 
+std::\+string {\bfseries get\+Couleur} () const
+\item 
+\Hypertarget{class_moto_a7adf01deb89985510cc009d74d84663b}\label{class_moto_a7adf01deb89985510cc009d74d84663b} 
+\doxymbox{\hyperlink{class_moteur}{Moteur}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Moteur} () const
+\item 
+float \doxymbox{\hyperlink{class_moto_ab36e475fe36a58c71641d1ee8d825ca7}{get\+Acceleration}} () const
+\begin{DoxyCompactList}\small\item\em Calcule l\textquotesingle{}acceleration theorique a 50 km/\+h Formule :\+ a = P /\+ (m \texorpdfstring{$\ast$}{*} v). \end{DoxyCompactList}\item 
+\Hypertarget{class_moto_a53ee0846b652475adbea9f3692bd1173}\label{class_moto_a53ee0846b652475adbea9f3692bd1173} 
+std::\+string {\bfseries to\+String} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe representant une \doxylink{class_moto}{Moto} (Composition avec \doxylink{class_moteur}{Moteur}). 
+
+\label{doc-func-members}
+\Hypertarget{class_moto_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_moto_ab36e475fe36a58c71641d1ee8d825ca7}\index{Moto@{Moto}!getAcceleration@{getAcceleration}}
+\index{getAcceleration@{getAcceleration}!Moto@{Moto}}
+\doxysubsubsection{\texorpdfstring{getAcceleration()}{getAcceleration()}}
+{\footnotesize\ttfamily \label{class_moto_ab36e475fe36a58c71641d1ee8d825ca7} 
+float Moto::\+get\+Acceleration (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcule l\textquotesingle{}acceleration theorique a 50 km/\+h Formule :\+ a = P /\+ (m \texorpdfstring{$\ast$}{*} v). 
+
+\begin{DoxyReturn}{Returns}
+float L\textquotesingle{}acceleration en m/\+s\texorpdfstring{$^\wedge$}{\string^}2 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Moto.\+hpp\end{DoxyCompactItemize}

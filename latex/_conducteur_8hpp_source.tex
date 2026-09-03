@@ -1,0 +1,48 @@
+\doxysection{Conducteur.\+hpp}
+\hypertarget{_conducteur_8hpp_source}{}\label{_conducteur_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONDUCTEUR\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONDUCTEUR\_HPP}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Moto.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }Conducteur\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ nom;}
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ prenom;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ anneeNaissance;}
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<Moto*>\ mesMotos;\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ Conducteur(std::string\ n,\ std::string\ p,\ \textcolor{keywordtype}{int}\ a)\ :\ nom(n),\ prenom(p),\ anneeNaissance(a)\ \{\}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ getNom()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ nom;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ getPrenom()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ prenom;\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ Le\ diagramme\ UML\ demande\ un\ string\ en\ retour\ pour\ l'annee}}
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ getAnneeNaissance()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ std::to\_string(anneeNaissance);\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Le\ parametre\ s'appelle\ 'newMoto'\ selon\ l'UML}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ addMoto(\doxymbox{\hyperlink{class_moto}{Moto}}*\ newMoto)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ mesMotos.push\_back(newMoto);}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ Le\ parametre\ s'appelle\ 'rmMoto'\ selon\ l'UML}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ rmMoto(\doxymbox{\hyperlink{class_moto}{Moto}}*\ rmMoto)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ mesMotos.erase(std::remove(mesMotos.begin(),\ mesMotos.end(),\ rmMoto),\ mesMotos.end());}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ std::string\ toString()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::string\ res\ =\ \textcolor{stringliteral}{"{}Conducteur:\ "{}}\ +\ prenom\ +\ \textcolor{stringliteral}{"{}\ "{}}\ +\ nom\ +\ \textcolor{stringliteral}{"{}\ (Ne\ en\ "{}}\ +\ getAnneeNaissance()\ +\ \textcolor{stringliteral}{"{})\(\backslash\)n"{}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ res\ +=\ \textcolor{stringliteral}{"{}\ \ Possede\ "{}}\ +\ std::to\_string(mesMotos.size())\ +\ \textcolor{stringliteral}{"{}\ moto(s):\(\backslash\)n"{}};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}*\ moto\ :\ mesMotos)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ res\ +=\ \textcolor{stringliteral}{"{}\ \ \ \ -\/\ "{}}\ +\ moto-\/>toString()\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

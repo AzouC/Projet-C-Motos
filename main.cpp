@@ -3,6 +3,7 @@
 #include "Electrique.hpp"
 #include "Thermique.hpp"
 
+
 int main() {
     std::cout << "--- 1. Creation 1 conducteur et 2 motos ---\n";
     Conducteur daniel("Dupont", "Daniel", 2008);
